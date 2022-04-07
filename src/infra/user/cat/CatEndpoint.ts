@@ -1,6 +1,6 @@
 import { Controller, Get, UseInterceptors } from '@nestjs/common';
 import { GetAllCatsUseCase } from 'src/use-case/GetAllCatsUseCase';
-import { LoggingInterceptor } from '../server/common/interceptors/LoggingInterceptor';
+import { LoggingInterceptor } from '../../server/common/interceptors/LoggingInterceptor';
 
 @Controller('cats')
 @UseInterceptors(LoggingInterceptor)
