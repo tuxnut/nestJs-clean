@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { LoadersModule } from './infra/server/LoadersModule';
+import { CommonModule } from './infra/server/common/CommonModule';
+import { LoadersModule } from './infra/server/loaders/LoadersModule';
 import { ControllersModule } from './infra/user/ControllersModule';
-import { UseCasesModules } from './use-case/UseCasesModules';
+import { UseCasesModules } from './use-case/UseCasesModule';
 
 @Module({
-  imports: [UseCasesModules, ControllersModule, LoadersModule],
+  imports: [UseCasesModules, CommonModule, ControllersModule, LoadersModule],
 })
 export class AppModule {}
