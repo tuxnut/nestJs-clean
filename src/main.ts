@@ -12,6 +12,7 @@ async function bootstrap() {
 
   const partialPath = join(__dirname, '..', 'views', 'partials');
   hbs.registerPartials(partialPath);
+  app.useStaticAssets(join(__dirname, '/../public'));
 
   await app.listen(process.env.PORT || 3000);
 }
